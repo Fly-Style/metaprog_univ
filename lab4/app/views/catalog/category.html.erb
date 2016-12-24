@@ -1,0 +1,62 @@
+<h1>Catalog</h1>
+<br>
+<div class="container">
+  <div class="col-xs-3" style="border: 1px solid">
+    <%= @cats_nav.html_safe %>
+  </div>
+
+  <div class="col-md-6 col-md-offset-1">
+    <h4><%= @category.name %></h4>
+    <div class="row">
+      <%= will_paginate @products %>
+    </div>
+
+
+    <div class="row">
+
+      <% if @category.children.count == 0 %>
+          <% @products.each_with_index do |product, i| %>
+            <div class="col-md-4">
+                <a href="/catalog/product/<%= product.id %>" style="min-height:180px; display: block;">
+                    <img class="img-responsive" src="<%= product.img %>">
+                    <h4><%= product.name %></h4>
+                </a>
+              <b><%= product.price %> usd.</b>
+              <div><%= product.desc_short %></div>
+            </div>
+
+              <% i = i + 1
+                if i % 3 == 0 %>
+                  <div class="clearfix"></div>
+                <% end %>
+              <% end %>
+
+          <div class="clearfix"></div>
+          <div class="row">
+            <%= will_paginate @products %>
+          </div>
+      <% else %>
+          <div class="row">
+            <% i = 0 %>
+              <% @category.children.each do |category| %>
+                <% if i == 3 %>
+                  </div>
+                  <% i = 0 %>
+                <% end %>
+                <% if i == 0 %>
+                  <div class="row">
+                <% end %>
+                <div class="col-md-3">
+                  <a href="/catalog/category/<%= category.id %>"><h4><%= category.name %></h4>
+                  <img src="<%= category.img %>" class="img-responsive">
+                  </a>
+                  <div>Category description</div>
+                </div>
+                <% i += 1 %>
+              <% end %>
+              </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>

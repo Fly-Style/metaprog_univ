@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @review.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @review.email %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @review.text %>
+</p>
+
+<%= link_to 'Edit', edit_review_path(@review), class: "btn btn-md btn-default" %>
+<%= link_to 'Back', reviews_path, class: "btn btn-md btn-default" %>

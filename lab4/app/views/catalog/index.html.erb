@@ -1,0 +1,29 @@
+<h1>Catalog</h1>
+<br>
+<div class="container">
+
+    <div class="col-md-3">
+      <%= raw @cats_nav %>
+    </div>
+
+    <div class="col-md-9">
+    <% i = 0 %>
+    <% @categories.each do |category| %>
+      <% if i == 3 %>
+        </div>
+        <% i = 0 %>
+      <% end %>
+      <% if i == 0 %>
+        <div class="row">
+      <% end %>
+        <div class="col-md-3">
+          <a href="/catalog/category/<%= category.id %>"><h4><%= category.name %></h4>
+            <img src="<%= category.img %>" class="img-responsive">
+          </a>
+          <div><%= category.desc %></div>
+        </div>
+      <% i += 1 %>
+    <% end %>
+    </div>
+    </div>
+</div>

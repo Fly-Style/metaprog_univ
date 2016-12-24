@@ -1,0 +1,53 @@
+<script
+  src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+<div ng-app="" class="ng-hide">
+  <p id="notice"><%= notice %></p>
+</div>
+
+<p>
+  <strong>Name:</strong>
+  <%= @order.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @order.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @order.address %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @order.comment %>
+</p>
+
+<p>
+  <strong>Status: </strong>
+  <%= "New" if @order.status.nil? %>
+  <%= "Delivery service" if @order.status == 1 %>
+  <%= "Processed" if @order.status == 2 %>
+</p>
+
+<h3>Positions:</h3>
+<table class="table">
+  <% sum = 0
+     @positions.each do |pos|
+       sum = sum + pos[:price]
+  %>
+      <tr>
+        <td><img src="<%= pos[:product].img %>" style="max-width: 200px"></td>
+        <td>
+          <div><%= pos[:product].name %></div>
+          <div><%= pos[:price] %> грн.</div>
+        </td>
+      </tr>
+  <% end %>
+  <tr><td>Summary: <%= sum %> грн.</td></tr>
+</table>
+
+<%= link_to 'Edit', edit_order_path(@order), class: "btn btn-md btn-warning" %>
+<%= link_to 'Back', orders_path, class: "btn btn-md btn-default" %>

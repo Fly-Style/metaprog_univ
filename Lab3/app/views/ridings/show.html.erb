@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @riding.name %>
+</p>
+
+<p>
+  <strong>First:</strong>
+  <%= @riding.first %>
+</p>
+
+<p>
+  <strong>Second:</strong>
+  <%= @riding.second %>
+</p>
+
+<p>
+  <strong>Winner:</strong>
+  <%= @riding.winner %>
+</p>
+
+<p>
+  <strong>Visible:</strong>
+  <%= @riding.visible %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @riding.active %>
+</p>
+
+<%= link_to 'Edit', edit_riding_path(@riding) %> |
+<%= link_to 'Back', ridings_path %>

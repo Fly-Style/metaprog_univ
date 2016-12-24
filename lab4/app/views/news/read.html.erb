@@ -1,0 +1,11 @@
+<h1><%= @post.title %></h1>
+
+<div class="row">
+	<div class="col-md-9">
+	  <div><%= @post.short_text %></div>
+      <% unless @post.img.nil? or @post.img.length == 0 %>
+	  <img src="<%= @post.img %>" class="img-responsive">
+      <% end %>
+	  <div><%= @post.long_text %></div>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+<%= form_for(@riding) do |f| %>
+  <% if @riding.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@riding.errors.count, "error") %> prohibited this riding from being saved:</h2>
+
+      <ul>
+      <% @riding.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :first %><br>
+    <%= f.text_field :first %>
+  </div>
+  <div class="field">
+    <%= f.label :second %><br>
+    <%= f.text_field :second %>
+  </div>
+  <div class="field">
+    <%= f.label :winner %><br>
+    <%= f.number_field :winner %>
+  </div>
+  <div class="field">
+    <%= f.label :visible %><br>
+    <%= f.check_box :visible %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br>
+    <%= f.check_box :active %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

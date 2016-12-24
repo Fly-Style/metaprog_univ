@@ -1,0 +1,26 @@
+<div class="text-center">
+  <h1>Profile</h1>
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @user.address %>
+  </p>
+
+  <a href="/profile/update" class="btn btn-primary">Update profile</a>
+  <hr/>
+  Order history:<br/>
+  <ul>
+    <% @history.each do |ord|%>
+      <li><a href="/orders/show/<%=ord.id%>"><%=ord.created_at%></a></li>
+    <% end %>
+  </ul>
+</div>

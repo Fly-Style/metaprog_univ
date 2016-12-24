@@ -1,0 +1,17 @@
+
+<%= javascript_include_tag 'application' %>
+<div id="user_nav">
+  <h2>You are not prepared! © Illidan The Stormrage</h2>
+  <% if current_user %>
+    Logged in as <%= current_user.email %>.
+    <%= link_to 'Log out', logout_path %>
+  <% else %>
+    <%= link_to 'Sign up', sign_up_path %> or
+    <%= link_to 'login', login_path %> or
+
+  <% end %>
+</div>
+
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>

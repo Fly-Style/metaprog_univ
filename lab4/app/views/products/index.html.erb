@@ -1,0 +1,33 @@
+<div class="text-center"> <p id="notice"><%= notice %></p></div>
+
+<h1>Listing Products</h1>
+
+<div class="table">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><h4>Name</h4></th>
+      <th><h4>Img</h4></th>
+      <th><h4>Desc short</h4></th>
+      <th><h4>Desc long</h4></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.img %></td>
+        <td><%= link_to 'Show', product, class: "btn btn-xs btn-default" %></td>
+        <td><%= link_to 'Edit', edit_product_path(product), class: "btn btn-xs btn-warning" %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-xs btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
+<%= link_to 'New Product', new_product_path, class: "btn btn-md btn-primary" %>

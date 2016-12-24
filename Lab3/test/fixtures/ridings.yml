@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  first: 1.5
+  second: 1.5
+  winner: 1
+  visible: false
+  active: false
+
+two:
+  name: MyString
+  first: 1.5
+  second: 1.5
+  winner: 1
+  visible: false
+  active: false

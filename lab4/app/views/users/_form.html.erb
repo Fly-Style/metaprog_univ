@@ -1,0 +1,47 @@
+<div class="container">
+<div class="col-lg-4 col-lg-offset-4">
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_area :address, class: "form-control" %>
+  </div>
+
+    <% if @user.role == User::ROLE_ADMIN || (!@currentUser.blank? and @currentUser.role == User::ROLE_ADMIN)%>
+        <div class="field">
+          <%= f.label :role %><br>
+          <select class="form-control" name="user[role]">
+            <option value="0" <%= "selected" if @user.role == User::ROLE_USER %> >User</option>
+            <option value="1" <%= "selected" if @user.role == User::ROLE_ADMIN %>>Admin</option>
+          </select>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :password %><br>
+      <%= f.password_field :password, class: "form-control" %>
+    </div>
+  <div class="actions">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
+</div>
+</div>

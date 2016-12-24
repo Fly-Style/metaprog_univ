@@ -1,0 +1,26 @@
+<h1>Cart</h1>
+
+
+<% if !@products.blank? %>
+
+  <div class="table">
+    <table class="table table-striped">
+      <% sum = 0
+            @products.each do |product|
+            sum = sum + product.price
+      %>
+              <tr>
+                <td><img src="<%= product.img %>" style="max-width: 200px"></td>
+                <td>
+                    <div><%= product.name %></div>
+                    <div><%= product.price %> usd.</div>
+                </td>
+              </tr>
+            <% end %>
+          <tr><td><h3><lead>Summ: <%= sum %> usd.</lead></h3></td></tr>
+    </table>
+  </div>
+  <a href="/checkout" class="btn btn-primary">Checkout</a>
+<% else %>
+    Nothing in cart for now
+<% end %>

@@ -1,0 +1,24 @@
+<h1>Checkout</h1>
+
+<div class="row">
+    <form method="post" action="/checkout" class="col-xs-4">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <div class="form-group">
+        <label>Name:</label>
+        <input class="form-control" name="name" value="<%= @user.name unless @user.blank? %>">
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input class="form-control" name="email" value="<%= @user.email unless @user.blank? %>">
+      </div>
+      <div class="form-group">
+        <label>Address:</label>
+        <textarea class="form-control" name="address"><%= @user.address unless @user.blank? %></textarea>
+      </div>
+      <div class="form-group">
+        <label>Comment:</label>
+        <textarea class="form-control" name="comment"></textarea>
+      </div>
+      <button class="btn-primary btn">Send</button>
+    </form>
+</div>

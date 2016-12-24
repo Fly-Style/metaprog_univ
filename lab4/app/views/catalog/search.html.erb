@@ -1,0 +1,34 @@
+<div class="col-xs-8">
+  <h1>Search result: <%= @query %></h1>
+  <div class="row">
+    <%= will_paginate @products %>
+  </div>
+  <div class="row">
+    <% unless @products.nil?
+         i = 0
+    %>
+        <% @products.each do |product| %>
+            <div class="col-xs-4">
+              <a href="/catalog/product/<%= product.id %>" style="min-height:250px; display: block;">
+                <img class="img-responsive" src="<%= product.img %>">
+                <h4><%= product.name %></h4>
+              </a>
+              <b><%= product.price %> usd.</b>
+              <div><%= product.desc_short %></div>
+            </div>
+
+            <% i = i + 1
+               if i % 3 == 0 %>
+                <div class="clearfix"></div>
+            <%  end %>
+        <% end %>
+
+        <div class="clearfix"></div>
+        <div class="row">
+          <%= will_paginate @products %>
+        </div>
+    <% else %>
+        Nothing found :(
+    <% end %>
+  </div>
+</div>

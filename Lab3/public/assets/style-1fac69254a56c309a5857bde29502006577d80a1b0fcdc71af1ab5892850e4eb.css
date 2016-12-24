@@ -1,0 +1,43 @@
+.chance:hover, .chance.active  {
+    background: #3279d0; /* Цвет фона под ссылкой */
+    color: #f1f7d7; /* Цвет ссылки */
+    cursor: pointer;
+    padding: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+
+.jumbotron {
+    height: 130px;
+}
+
+.hello {
+    font-size: 36px;
+}
+
+.user-fail {
+    visibility: hidden;
+    background: #ff7437;
+}
+
+.owner-info-bar {
+    background: #babcb5;
+    height: 36px;
+    text-align: center;
+}
+
+.owner-info {
+    height: 36px;
+    display: inline-block;
+    float: none;
+    text-align: center;
+    vertical-align: text-bottom;
+    font-size: 22px;
+}
+
+
+
+
+

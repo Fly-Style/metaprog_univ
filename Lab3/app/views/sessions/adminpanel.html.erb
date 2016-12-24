@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <%= javascript_include_tag 'application', 'data-turbolinks-track' =>  true %>
+   <%= javascript_include_tag 'main' %>
+   <%= stylesheet_link_tag 'style' %>
+   <%= stylesheet_link_tag 'admin' %>
+  <title>Admin page</title>
+</head>
+
+
+<body>
+    <div class="jumbotron">
+        <h2 class="text-center">Hello, dear Admin</h2>
+    </div>
+
+    <div class="dropdown text-center">
+        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+            Choose actions
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu text-center">
+            <li><a href="/main" class="col-md-12"> To bet page </a></li>
+            <li><a href="/bookpanel" class="col-md-12 bookmaker"> To bookmaker page </a></li>
+            <li><a href="/bet_actions" class="col-md-12 bookmaker"> To bets actions </a></li>
+            <li><a href="/logout" class="col-md-12 bookmaker"> Logout </a></li>
+        </ul>
+    </div>
+</body>
+</html>

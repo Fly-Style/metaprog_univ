@@ -1,0 +1,30 @@
+<div class="text-center"> <p id="notice"><%= notice %></p></div>
+
+<script>
+
+</script>
+<p>
+  <strong>Id:</strong>
+  <%= @category.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @category.name %>
+</p>
+
+<p>
+  <strong>Parent:</strong>
+  <%= @category.parent.name unless @category.parent.nil? %>
+</p>
+
+<% unless @category.img.nil? %>
+<p>
+  <strong>Image:</strong><br/>
+  <img src="<%=@category.img%>" class="img-thumbnail" alt="Category image" width="256" />
+</p>
+<% end %>
+
+<%= link_to 'Edit', edit_category_path(@category), class: "btn btn-md btn-warning" %>
+<%= link_to 'Back', categories_path, class: "btn btn-md btn-default" %>
+</div>

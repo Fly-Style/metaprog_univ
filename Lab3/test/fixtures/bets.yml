@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  value: 1.5
+  potentialWin: 1.5
+  sucessful: false
+  active: false
+  client_id: 
+
+two:
+  value: 1.5
+  potentialWin: 1.5
+  sucessful: false
+  active: false
+  client_id: 

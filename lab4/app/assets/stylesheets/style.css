@@ -1,0 +1,223 @@
+.nav {
+    color: #080808;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.header{
+	padding : 120px 0;
+	text-align:center;
+    background: #020f23;
+}
+.logo_ {
+	width:220px;
+	margin:0 auto 35px;
+}
+
+.header h1{
+	font-family: 'Montserrat',sans-serif;
+	font-size:50px;
+	font-weight:400;
+	letter-spacing: -1px;
+	margin:0 0 22px 0 ;
+	color:#fff;
+}
+
+.we-create{
+	padding:0;
+	margin:35px 0 55px;
+}
+.wp-pic{
+	margin-bottom:20px;
+}
+.we-create li{
+	display:inline-block;
+	font-family: 'Montserrat',sans-serif;
+	font-size:14px;
+	color: #bcbcbc;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin:0 5px 0 0;
+	padding:0 0 0 15px;
+}
+.we-create li:first-child{
+	background:none;
+}
+
+.start-button {
+	padding-left: 0px;
+}
+
+.start-button li a{
+color: #fff;
+}
+
+
+.link{
+	padding:15px 35px;
+	background:#7cc576;
+	color:#fff !important;
+	font-size:16px;
+	font-weight:400;
+	font-family: 'Montserrat', sans-serif;
+	display:inline-block;
+	border-radius:3px;
+	text-transform:uppercase;
+	line-height:25px;
+	margin-bottom:20px;
+	transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+}
+.link:hover {
+	text-decoration:none;
+	color:#7cc576 !important;
+	background:#fff;
+}
+
+.link:active, .link:focus {
+	background: #7cc576;
+	text-decoration:none;
+	color:#fff !important;
+}
+
+
+div.main {
+    text-align: center;
+}
+
+div.main div.greeting  {
+    margin-top: 160px;
+}
+
+div.main div.greeting p {
+    font-size: 48px;
+    height: 120px;
+    color: #635485
+}
+
+div.main div.home_greeting  {
+    margin-top: 10px;
+}
+
+div.main div.home_greeting p {
+    font-size: 32px;
+    height: 70px;
+    color: #635485
+}
+
+div.main div.references {
+    margin-top: 300px;
+}
+div.main div.references a {
+    display: block;
+    color: black;
+    font-size: 50px;
+}
+
+div.login_form {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+div.login_form_error {
+    vertical-align: middle;
+}
+
+a#auth-link {
+    font-size: 36px;
+}
+
+.vk_link {
+    font-size: 26px;
+}
+
+.group-img {
+    float: inherit;
+}
+
+.bordered_post {
+    border: 1px solid;
+}
+
+.weighted-text {
+    font-size: 20px;
+    font-family: 'Montserrat',sans-serif;
+}
+
+
+div.common_friends_form {
+    vertical-align: middle;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+div.common_friends_form_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px
+}
+
+div.common_friends_form_details input {
+     vertical-align: middle;
+}
+
+div.list_of_users {
+    font-size: 14px
+}
+
+div.list_of_users p {
+    font-size: 20px
+}
+
+div.home {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+div.user_parameters {
+    font-size: 15px;
+    text-align: right;
+}
+
+div.user_details {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: mediumslateblue;
+}
+
+div.user_options div.usr-image {
+    text-align: left;
+    margin-top: 40px;
+}
+
+.form{
+	margin:0 66px 0 30px;
+}
+
+._form {
+    margin: 0 auto;
+    float: none;
+}
+
+div.add_patient {
+    font-size: 20px;
+    text-align: center;
+    background: #d0ff8c;
+    margin-top: 100px;
+}
+div.languages {
+    text-align: right;
+}
+
+.friends_graph {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,61 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+
+
+    <title>{% trans "Race ender" %}</title>
+</head>
+<body>
+
+    <div class="owner-info-bar">
+        <div class="col-md-2 owner-info text-left " align="center">
+             <a href="/{% trans "en" %}/polls/admin/">{% trans "Back" %}</a>
+        </div>
+        <div class="col-md-6 owner-info text-center " align="center"> {% trans "End this!!!" %} </div>
+        <div class="col-md-3 owner-info text-center " align="center" id="usr-name"> {% trans "Hello," %} {{ client.name }}</div>
+    </div>
+
+    <table class="table table-bordered text-center">
+    <tr class="bet-table-head">
+        <td class="text-center">{% trans "Back" %}</td>
+        <td class="text-center">{% trans "HORSES" %}</td>
+        <td class="text-center">{% trans "1st CEFF" %}</td>
+        <td class="text-center">{% trans "2nd CEFF" %}</td>
+        <td class="text-center">{% trans "Bet" %}</td>
+    </tr>
+    {% if latest_ride_list %}
+        {% for ride in latest_ride_list %}
+
+            <tr>
+                <td>
+                    <a class="ride"> {{ ride.id }} </a>
+                </td>
+                <td>
+                    <a style="padding: 10px">{{ ride.name }}</a>
+                </td>
+                <td>
+                    <a class="chance" id="chance-one"> {{ ride.firstHorseChance }} </a>
+                </td>
+                <td>
+                    <a class="chance" id="chance-two"> {{ ride.secondHorseChance }}</a>
+                </td>
+                <td>
+                    <button class="btn btn-primary btn-sm" id="bet-btn" onclick="makeWinner()">{% trans "Make" %}</button>
+                </td>
+            </tr>
+        {% endfor %}
+    {% else %}
+        <p>{% trans "No polls are available." %}</p>
+    {% endif %}
+
+</table>
+    <script src={% static "js/jquery-3.1.1.min.js" %}></script>
+    <script src={% static "js/admin_actions.js" %}></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

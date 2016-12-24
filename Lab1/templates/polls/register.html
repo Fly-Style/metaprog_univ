@@ -1,0 +1,45 @@
+{% load i18n %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/login.css" %}">
+    <script src={% static "js/jquery-3.1.1.min.js" %}></script>
+    <title>{% trans "Register screen" %}</title>
+</head>
+
+<body>
+    <div class="hoodie">
+        <p><a href="/{% trans "en" %}/polls/">{% trans "Login" %}</a></p>
+        <a href="http://127.0.0.1:8000/en/polls/registerpage/"><img src="{% static "eng.jpg" %}" alt="US"></a>
+        <a href="http://127.0.0.1:8000/ru/polls/registerpage/"><img src="{% static "ukr.jpg" %}" alt="UA"></a>
+
+    </div>
+    <div class="wrapper">
+        <div class="container">
+            <h1>{% trans "Welcome, register please!" %}</h1>
+
+            <form class="form" action="http://127.0.0.1:8000/{% trans "en" %}/polls/register/" method="POST">
+                {% csrf_token %}
+                <input id="login-name" type="text" placeholder="Username" name="login" maxlength="64" required>
+                <input id="login-email" type="email" placeholder="Email" name="email" maxlength="64" required>
+                <input id="login-pass" type="password" placeholder="Password" name="password" maxlength="30" required>
+                <button type="submit" id="login-button">{% trans "Register!" %}</button>
+            </form>
+        </div>
+
+        <div class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+</body>

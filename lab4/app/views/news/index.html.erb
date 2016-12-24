@@ -1,0 +1,18 @@
+<h1>News</h1>
+
+<ul class="list-group">
+	<% @posts.each do |post| %>
+	    <li class="list-group-item">
+	      <h4><%= post.title %> <div class="text-muted" style="font-size: 14px"><%= post.created_at.to_date %></div></h4>
+	      <div><%= post.short_text %></div>
+          <% unless post.img.nil? or post.img.length == 0 %>
+	      <img src="<%= post.img %>" class="img-responsive" style="max-width: 400px">
+          <% end %>
+	      <a href="/news/read/<%= post.id %>">Read all -> </a>
+	    </li>
+	<% end %>
+</ul>	
+
+<div class="row" style="padding: 30px 0px">
+  <a href="/news/archive" class="btn btn-info">Archive</a>
+</div>

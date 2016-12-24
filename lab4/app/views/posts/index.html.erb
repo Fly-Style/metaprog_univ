@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Posts</h1>
+
+<div class="table">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><h4>Title</h4></th>
+      <th><h4>Short text</h4></th>
+      <th><h4>Long text</h4></th>
+      <th><h4>Img</h4></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.short_text %></td>
+        <td><%= post.long_text %></td>
+        <td><%= post.img %></td>
+        <td><%= link_to 'Show', post, class: "btn btn-xs btn-default" %></td>
+        <td><%= link_to 'Edit', edit_post_path(post), class: "btn btn-xs btn-warning" %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-xs btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
+<%= link_to 'New Post', new_post_path, class: "btn btn-md btn-primary" %>

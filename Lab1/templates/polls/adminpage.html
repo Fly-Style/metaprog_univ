@@ -1,0 +1,35 @@
+{% load i18n %}
+{% load app_filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/admin.css" %}">
+    <title>{% trans "Admin page" %}</title>
+</head>
+
+
+<body>
+    <div class="jumbotron">
+        <h1 class="text-center">{% trans "Hello, dear Admin" %} {{ client.username|toUpper }}!</h1>
+    </div>
+
+    <div class="dropdown text-center">
+        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+            {% trans "Choose actions" %}
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu text-center">
+            <li><a href="/{% trans "en" %}/polls/betpage/" class="col-md-12">{% trans "To bet page" %}</a></li>
+            <li><a href="/{% trans "en" %}/polls/bookmaker/" class="col-md-12 bookmaker">{% trans "To bookmaker page" %}</a></li>
+            <li><a href="/{% trans "en" %}/polls/betsactions/" class="col-md-12 bookmaker">{% trans "To bets actions" %}</a></li>
+            <li><a href="/{% trans "en" %}/polls/logout/" class="col-md-12 bookmaker">{% trans "Logout" %}</a></li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

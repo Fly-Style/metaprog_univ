@@ -1,0 +1,33 @@
+
+<div class="row" style="font-family: 'Montserrat', sans-serif">
+  <div class="col-lg-8">
+    <div class="jumbotron text-center" style="font-family: 'Montserrat', sans-serif">
+        <h2>SHOP</h2>
+
+        <h3>Contact us:</h3>
+        <p>
+        <div><b>Phone: </b> +38(099)1234567</div>
+        <div><b>Email: </b> admin@site.ruby </div>
+
+        <p>Enjoy our delivery service</p>
+        </p>
+    </div>
+  </div>
+  <div class="col-lg-4">
+      <%= render "reviews/form" %>
+  </div>
+</div>
+
+<div class="row col-md-offset-2" style="vertical-align: middle;">
+  <div class="col-md-10 text-center">
+    <% @categories.each do |category| %>
+        <div class="col-md-4">
+          <a href="/catalog/category/<%= category.id %>">
+            <h4><%= category.name %></h4>
+            <img src="<%= category.img %>" class="img-responsive">
+          </a>
+        </div>
+    <% end %>
+  </div>
+
+</div>

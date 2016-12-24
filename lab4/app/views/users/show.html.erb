@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @user.role==0?"User":"Admin"%>
+</p>
+
+
+<p>
+  <strong>Address:</strong>
+  <%= @user.address %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user), class: "btn btn-md btn-warning" %>
+<% if !@currentUser.blank? && @currentUser.role == User::ROLE_ADMIN %>
+<%= link_to 'Back', users_path, class: "btn btn-md btn-default" %>
+<% end %>

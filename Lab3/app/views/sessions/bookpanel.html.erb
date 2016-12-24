@@ -1,0 +1,85 @@
+<title>BET MAKING</title>
+<meta charset="utf-8">
+<%= javascript_include_tag 'application', 'data-turbolinks-track' =>  true %>
+<%= javascript_include_tag 'main' %>
+<%= stylesheet_link_tag 'style' %>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+<div class="owner-info-bar">
+    <div class="col-md-3 owner-info text-center " align="center"> Hello, <%= @user.username %> </div>
+    <div class="col-md-4 owner-info text-left " align="center">
+         <a href="/main">Back</a>
+    </div>
+    <div class="col-md-3 owner-info text-center" id="balance-bar" align="center"> Balance : <%= @user.balance %> </div>
+</div>
+<div class="jumbotron text-center">
+    <h2 class="hello">Making bets count</h2>
+</div>
+
+
+<table class="table table-bordered text-center">
+    <tr class="bet-table-head">
+        <td class="text-center">Ride ID </td>
+        <td class="text-center">HORSES </td>
+        <td class="text-center">1st CEFF </td>
+        <td class="text-center">2nd CEFF </td>
+        <td class="text-center">Bet </td>
+    </tr>
+    <% @rides.each do |ride| %>
+        <tr>
+            <td>
+                <a class="ride"> <%= ride.id %> </a>
+            </td>
+            <td>
+                <a style="padding: 10px"><%= ride.name %></a>
+            </td>
+            <td>
+                <label for="usr-f" class="control-label">First horse capacity:</label>
+                <input type="text" class="form-horizontal clearable" id="usr-f">
+            </td>
+            <td>
+                 <label for="usr-s" class="control-label">Second horse capacity:</label>
+                <input type="text" class="form-horizontal clearable" id="usr-s">
+            </td>
+            <td>
+            </td>
+                <td>
+                <button class="btn btn-primary btn-sm bet-btn">Set</button>
+            </td>
+        </tr>
+    <% end %>
+
+</table>
+
+<script>
+  $(".bet-btn").click(function() {
+    var $tbl = $(this).closest("tr")   // Finds the closest row <tr>
+    const $item = $tbl.find('#usr-f').val()
+    const $item2 = $tbl.find('#usr-s').val()
+    const $ride_id = $tbl.find('.ride').html()
+
+    var json = JSON.stringify({
+        first : $item,
+        second : $item2,
+        ride_id : $ride_id
+    });
+
+
+    $.ajax({
+        "type": "POST",
+        "dataType": "json",
+        "url": "/prediction",
+        "data": json,
+        "beforeSend" : function (xhr) {
+            console.log("Before Send");
+            console.log(xhr);
+           location.reload(true);
+        },
+        "success": function(result) {
+            console.log(result);
+        }
+    });
+});
+</script>

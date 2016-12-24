@@ -1,0 +1,29 @@
+<h1>News Archive</h1>
+
+<div class="row">
+  <form action="/news/archive" method="get">
+    <%= select_tag(:year, options_for_select(@years)) %>
+    <%= hidden_field_tag 'month', "#{@month}" %>
+    <input type="submit" value="Go">
+  </form>
+</div>
+<div class="row">
+  <form action="/news/archive" method="get">
+    <%= select_tag(:month, options_for_select(@months)) %>
+    <%= hidden_field_tag 'year', "#{@year}" %>
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<div class="row">
+  <h3><%= @month %>.<%= @year %></h3>
+</div>
+
+<% @posts.each do |post| %>
+    <div class="row">
+      <h3><%= post.title %> <div class="text-muted" style="font-size: 14px"><%= post.created_at.to_date %></div></h3>
+      <div><%= post.short_text %></div>
+      <img src="<%= post.img %>" class="img-responsive" style="max-width: 400px">
+      <a href="/news/read/<%= post.id %>">Read all -> </a>
+    </div>
+<% end %>

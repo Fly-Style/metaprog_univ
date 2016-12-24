@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-02 09:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: templates/polls/adminpage.html:9
+msgid "Admin page"
+msgstr "Страница администратора"
+
+#: templates/polls/adminpage.html:15
+msgid "Hello, dear Admin"
+msgstr "Здравствуй, великий "
+
+#: templates/polls/adminpage.html:20
+msgid "Choose actions"
+msgstr "Выбери действия"
+
+#: templates/polls/adminpage.html:24 templates/polls/adminpage.html:25
+#: templates/polls/adminpage.html:26 templates/polls/adminpage.html:27
+#: templates/polls/bookmakerpage.html:14 templates/polls/endrace.html:18
+#: templates/polls/index.html:16 templates/polls/login.html:13
+#: templates/polls/login.html:18 templates/polls/register.html:13
+#: templates/polls/register.html:19
+msgid "en"
+msgstr "ru"
+
+#: templates/polls/adminpage.html:24 templates/polls/startpage.html:18
+msgid "To bet page"
+msgstr "К ставкам"
+
+#: templates/polls/adminpage.html:25 templates/polls/startpage.html:19
+msgid "To bookmaker page"
+msgstr "К странице букмекера"
+
+#: templates/polls/adminpage.html:26
+
+msgid "To bets actions"
+msgstr "К действиям над ставками"
+
+#: templates/polls/adminpage.html:27 templates/polls/startpage.html:20
+msgid "Logout"
+msgstr "Выход"
+
+#: templates/polls/bookmakerpage.html:14 templates/polls/endrace.html:18
+#: templates/polls/endrace.html:26 templates/polls/index.html:16
+msgid "Back"
+msgstr "Назад"
+
+#: templates/polls/bookmakerpage.html:16 templates/polls/index.html:18
+msgid "Balance :"
+msgstr "Баланс :"
+
+#: templates/polls/bookmakerpage.html:19
+msgid "Making bets count"
+msgstr "Формируем коэффициенты"
+
+#: templates/polls/bookmakerpage.html:25 templates/polls/index.html:33
+msgid "Ride ID"
+msgstr "Id гонки"
+
+#: templates/polls/bookmakerpage.html:26 templates/polls/endrace.html:27
+#: templates/polls/index.html:34
+msgid "HORSES"
+msgstr "Кони"
+
+#: templates/polls/bookmakerpage.html:27 templates/polls/endrace.html:28
+#: templates/polls/index.html:35
+msgid "1st CEFF"
+msgstr "1-й коэфф"
+
+#: templates/polls/bookmakerpage.html:28 templates/polls/endrace.html:29
+#: templates/polls/index.html:36
+msgid "2nd CEFF"
+msgstr "2-й коэфф"
+
+#: templates/polls/bookmakerpage.html:29 templates/polls/endrace.html:30
+#: templates/polls/index.html:37 templates/polls/index.html:62
+msgid "Bet"
+msgstr "Ставка!"
+
+#: templates/polls/bookmakerpage.html:52
+#, fuzzy
+#| msgid "Bet"
+msgid "Set"
+msgstr "Ставка!"
+
+#: templates/polls/endrace.html:12
+msgid "Race ender"
+msgstr "Завершение гонок"
+
+#: templates/polls/endrace.html:20
+msgid "End this!!!"
+msgstr "Остановитесь!"
+
+#: templates/polls/endrace.html:21 templates/polls/index.html:14
+#: templates/polls/startpage.html:14
+msgid "Hello,"
+msgstr "Привет,"
+
+#: templates/polls/endrace.html:49
+msgid "Make"
+msgstr "Заверишить"
+
+#: templates/polls/endrace.html:54 templates/polls/index.html:67
+msgid "No polls are available."
+msgstr "Нету гонок сейчас"
+
+#: templates/polls/fail.html:9
+msgid "YOU ARE NOT PREPARED!"
+msgstr "ВЫ НЕ ГОТОВЫ"
+
+#: templates/polls/index.html:21
+msgid "My Bet Page"
+msgstr "Страница ставок"
+
+#: templates/polls/index.html:57
+msgid "Count:"
+msgstr "Сумма:"
+
+#: templates/polls/login.html:8
+msgid "Login screen"
+msgstr "Окно входа"
+
+#: templates/polls/login.html:13
+msgid "Sign up"
+msgstr "Регистрация"
+
+#: templates/polls/login.html:17
+msgid "Welcome"
+msgstr "Добро пожаловать!"
+
+#: templates/polls/login.html:22 templates/polls/register.html:13
+msgid "Login"
+msgstr "Логин"
+
+#: templates/polls/register.html:8
+msgid "Register screen"
+msgstr "Окно регистрации"
+
+#: templates/polls/register.html:17
+msgid "Welcome, register please!"
+msgstr "Приветствуем, регнитесь пож!"
+
+#: templates/polls/register.html:24
+msgid "Register!"
+msgstr "Регаемся!"
+
+#: templates/polls/startpage.html:8
+msgid "Start page"
+msgstr "Начальная страница"

@@ -1,0 +1,2 @@
+module BetToRidesHelper
+end
