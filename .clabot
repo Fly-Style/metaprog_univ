@@ -1,5 +1,5 @@
 {
-  "contributors": "",
+  "contributors": ["https://github.com/Fly-Style"],
   "message": "Hello, contributor!",
   "label": "signed-cla",
   "recheckComment": "Rechecking..."
